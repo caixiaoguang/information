@@ -149,13 +149,14 @@ xpanel-wrapper-2:nth-child(1) {
   height: 33.33333%;
 }
 .xpanel-wrapper-1:nth-child(1) {
-  height: 10%;
+  height: 6%;
 }
 .xpanel-wrapper-1:nth-child(1) #toolbar {
   height: 5%;
   margin: 0 auto;
   display: flex;
   text-align: center;
+  align-items: center;
 }
 .xpanel-wrapper-1:nth-child(1) #toolbar .dropdown-menu {
   background-color: #2e3546;
@@ -180,10 +181,10 @@ xpanel-wrapper-2:nth-child(1) {
   border: none;
 }
 .xpanel-wrapper-1:nth-child(2) {
-  height: 80%;
+  height: 89%;
 }
 .xpanel-wrapper-1:nth-child(3) {
-  height: 10%;
+  height: 5%;
   padding-bottom: 8px;
 }
 .xpanel-wrapper-1:nth-child(3) .xpanel {
