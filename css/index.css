@@ -16,6 +16,9 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+a {
+  color: #44a1db;
+}
 a:hover {
   text-decoration: none;
   cursor: pointer;
