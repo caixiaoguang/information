@@ -5,31 +5,13 @@
   height: 40%;
 }
 .xpanel-wrapper-2:nth-child(2) .xpanel {
-  padding-bottom: 5px;
+  padding: 10px;
 }
 .xpanel-wrapper-2:nth-child(2) #planting-info {
   height: 100%;
 }
-.xpanel-wrapper-2:nth-child(2) #planting-info div {
-  height: 100%;
-}
-.xpanel-wrapper-2:nth-child(2) #planting-info div .tab-content {
-  width: 100%;
-  height: calc(70%);
-  color: #fff;
-}
-.xpanel-wrapper-2:nth-child(2) #planting-info div .tab-content #profile {
-  overflow-y: auto;
-  color: #5dc2fe;
-}
-.xpanel-wrapper-2:nth-child(2) #planting-info div .tab-content #profile tr:hover {
-  background-color: #43555f;
-}
-.xpanel-wrapper-2:nth-child(2) #planting-info div .tab-content #profile th {
-  border-bottom: 1px solid #5dc2fe;
-}
-.xpanel-wrapper-2:nth-child(2) #planting-info div .tab-content #profile td {
-  border-top: 1px solid #5dc2fe;
+.xpanel-wrapper-2:nth-child(2) #planting-info .layui-table-view {
+  margin: 0;
 }
 .xpanel-wrapper-2:nth-child(2) {
   height: 35%;
