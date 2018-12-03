@@ -41,12 +41,11 @@
 								</div>
 							</div>
 						</div>
-						<!-- 种植情况 -->
+						<!-- 产量排名-->
 						<div class="xpanel-wrapper xpanel-wrapper-2">
 							<div class="xpanel">
 								<div class="fill-h" id="planting-info">
 									<table id='ranking'>
-									
 									</table>
 								</div>
 							</div>
@@ -74,60 +73,48 @@
 											</button>
 											<ul class="dropdown-menu">
 												<li><a href="./index.html">园区</a></li>
-												<li><a href="#">国家</a></li>
+												<!-- <li><a href="#">国家</a></li> -->
 											</ul>
 										</div>
 									</div>
 									<div>
-										<span class="glyphicon glyphicon-tasks"></span>
+										<span class="glyphicon glyphicon-zoom-in"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>分析</span> <span class="caret"></span>
+												<span>放大</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
 										</div>
 									</div>
 									<div>
-										<span class="glyphicon glyphicon-wrench"></span>
+										<span class="glyphicon glyphicon-zoom-out"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>工具</span> <span class="caret"></span>
+												<span>缩小</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
 										</div>
 									</div>
 									<div>
-										<span class="glyphicon glyphicon-align-left"></span>
+										<span class="glyphicon glyphicon-resize-horizontal"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>图层</span> <span class="caret"></span>
+												<span>测量</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
 										</div>
 									</div>
 									<div>
 										<span class="glyphicon glyphicon-off icon"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>清除</span> <span class="caret"></span>
+												<span>清除</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
+										</div>
+									</div>
+									<div>
+										<span class="glyphicon glyphicon-random"></span>
+										<div class="btn-group" id="btn">
+											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<span>路径</span>
+											</button>
 										</div>
 									</div>
 									<div>
@@ -136,7 +123,6 @@
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												<span>全屏</span>
 											</button>
-
 										</div>
 									</div>
 								</div>
@@ -191,40 +177,16 @@
 							<div class="xpanel">
 								<!-- 各类品种情况 -->
 								<div class="fill-h" id="variety-info">
-									<div class="title">
-										各类品种情况
-									</div>
-									<div class="media">
-										<div class="media-left">
-											<a href="#">
-												<img class="media-object" src="./img/kiwi.jpg" alt="...">
-											</a>
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#variety-ranking" aria-controls="variety-ranking" role="tab" data-toggle="tab">各类型产量比例</a></li>
+										<li role="presentation"><a href="#variety-proportion" aria-controls="variety-proportion" role="tab" data-toggle="tab">各类型情况</a></li>
+									</ul>
+									<!-- Tab panes -->
+									<div class="tab-content" style="height:100%">
+										<div role="tabpanel" class="tab-pane active" id="variety-ranking">
 										</div>
-										<div class="media-body">
-											<h4 class="media-heading">品种一</h4>
-											果实大，成熟快，长度为5-8厘米，直径为4.5-5.5厘米。
-										</div>
-									</div>
-									<div class="media">
-										<div class="media-left">
-											<a href="#">
-												<img class="media-object" src="./img/kiwi.jpg" alt="...">
-											</a>
-										</div>
-										<div class="media-body">
-											<h4 class="media-heading">品种二</h4>
-											果实大，成熟快，长度为5-8厘米，直径为4.5-5.5厘米。
-										</div>
-									</div>
-									<div class="media">
-										<div class="media-left">
-											<a href="#">
-												<img class="media-object" src="./img/kiwi.jpg" alt="...">
-											</a>
-										</div>
-										<div class="media-body">
-											<h4 class="media-heading">品种三</h4>
-											果实大，成熟快，长度为5-8厘米，直径为4.5-5.5厘米。
+										<div role="tabpanel" class="tab-pane" id="variety-proportion" >
+												<table id="variety"></table>
 										</div>
 									</div>
 								</div>

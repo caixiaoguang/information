@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./lib//bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./lib/leaflet/leaflet.css">
+	<link rel="stylesheet" href="./lib/vedio/video-js.min.css">
 	<link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -28,11 +29,14 @@
 						<div class="xpanel-wrapper xpanel-wrapper-2">
 							<div class="xpanel">
 								<div class="main-color" id="fruit-feature">
-									<h3 class="title">区域猕猴桃特色</h3>
+									<div class="title">
+										<span class="glyphicon glyphicon-star"></span>区域猕猴桃特色
+									</div>
 									<div>
 										<a>
 											<p class="decription">
-												猕猴桃是原产中国的落叶性藤本果树，全世界已有记载的54种猕猴桃，中国就有52种。猕猴桃在中国发现和利用的时间最早，已有3000年的历史，栽培利用的时间，最少已有1200多年。
+												猕猴桃是原产中国的落叶性藤本果树，全世界已有记载的54种猕猴桃，中国就有52种。猕猴桃在中国发现和利用的时间最早，
+												已有3000年的历史，栽培利用的时间，最少已有1200多年。
 											</p>
 										</a>
 									</div>
@@ -51,9 +55,12 @@
 										<!-- Tab panes -->
 										<div class="tab-content">
 											<div role="tabpanel" class="tab-pane active" id="home">
-												<a href="">
+												<a href="#" >
 													<p class="decription">
-														猕猴桃是原产中国的落叶性藤本果树，全世界已有记载的54种猕猴桃，中国就有52种。猕猴桃在中国发现和利用的时间最早，已有3000年的历史，栽培利用的时间，最少已有1200多年。
+														猕猴桃原产中国，1904年从宜昌传到新西兰，经培育在新西兰广泛种植，起初新西兰人称它为宜昌醋栗，
+														因名字有左派色彩在市场遇冷，后改名美龙瓜，但新西兰瓜类税收较高，最终改名为奇异果。所以奇异果就
+														是猕猴桃的一个人工选育后的品种，皮表绒毛分布均匀，手感光滑；而它的老祖宗中华猕猴桃，绒毛分布不
+														均，触感粗糙。
 													</p>
 												</a>
 											</div>
@@ -123,60 +130,48 @@
 											</button>
 											<ul class="dropdown-menu">
 												<li><a href="./province.html">省县</a></li>
-												<li><a href="#">国家</a></li>
+												<!-- <li><a href="#">国家</a></li> -->
 											</ul>
 										</div>
 									</div>
 									<div>
-										<span class="glyphicon glyphicon-tasks"></span>
+										<span class="glyphicon glyphicon-zoom-in"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>分析</span> <span class="caret"></span>
+												<span>放大</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
 										</div>
 									</div>
 									<div>
-										<span class="glyphicon glyphicon-wrench"></span>
+										<span class="glyphicon glyphicon-zoom-out"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>工具</span> <span class="caret"></span>
+												<span>缩小</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
 										</div>
 									</div>
 									<div>
-										<span class="glyphicon glyphicon-align-left"></span>
+										<span class="glyphicon glyphicon-resize-horizontal"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>图层</span> <span class="caret"></span>
+												<span>测量</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
 										</div>
 									</div>
 									<div>
 										<span class="glyphicon glyphicon-off icon"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>清除</span> <span class="caret"></span>
+												<span>清除</span>
 											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#">按属性查询</a></li>
-												<li><a href="#">按名称查询</a></li>
-												<li><a href="#">空间查询</a></li>
-											</ul>
+										</div>
+									</div>
+									<div>
+										<span class="glyphicon glyphicon-random"></span>
+										<div class="btn-group" id="btn">
+											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<span>路径</span>
+											</button>
 										</div>
 									</div>
 									<div>
@@ -238,20 +233,50 @@
 					<div class="col-lg-3 fill-h">
 						<div class="xpanel-wrapper xpanel-wrapper-3">
 							<div class="xpanel">
-								<!-- 省份地图 -->
-								<div class="fill-h" id="provinceMap"></div>
+								<!-- 设备状态 -->
+								<div class="fill-h">
+									<div class="title">
+										<span class="glyphicon glyphicon-cog"></span>设备状态
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="xpanel-wrapper xpanel-wrapper-3">
 							<div class="xpanel">
-								<!-- 城市地图 -->
-								<div class="fill-h" id="cityMap"></div>
+								<!-- 视频播放 -->
+								<div class="fill-h">
+									<!-- <div class="title">
+										<span class="glyphicon glyphicon-facetime-video"></span>视频播放
+									</div> -->
+									<video id="my-player" class="video-js vjs-big-play-centered" controls preload="auto" poster="//vjs.zencdn.net/v/oceans.png"
+									 style="width:100%;height:100%" data-setup='{}'>
+										<source src="//media.html5media.info/video.mp4" type="video/mp4">
+										</source>
+										<source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+										</source>
+										<source src="//media.html5media.info/video.ogv" type="video/ogg">
+										</source>
+										<p class="vjs-no-js">
+											请开启Javascript脚本以便
+											<a href="http://videojs.com/html5-video-support/" target="_blank">
+												支持HTML5 video播放器
+											</a>
+										</p>
+									</video>
+								</div>
 							</div>
 						</div>
 						<div class="xpanel-wrapper xpanel-wrapper-3">
 							<div class="xpanel">
-								<!-- 区县地图 -->
-								<div class="fill-h" id="countyMap"></div>
+								<!-- 公告板 -->
+								<div class="fill-h" id="countyMap">
+									<div class="title">
+										<span class="glyphicon glyphicon-bell"></span>公告板
+									</div>
+									<p class="decription">
+										暂无公告信息!
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -268,6 +293,8 @@
 <script src="./lib//bootstrap//js/bootstrap.min.js"></script>
 <script src="./lib/leaflet/leaflet.js"></script>
 <script src="./lib/leaflet/leaflet.ChineseTmsProviders.js"></script>
+<script src="./lib/vedio/video.min.js"></script>
 <script src="./js/index.js"></script>
+<script src="./js/videoPlay.js"></script>
 
 </html>

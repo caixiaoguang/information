@@ -106,17 +106,23 @@ body.bg04 {background-image:url("../img/bg04.png");} */
     margin: 0 0 5px;
     font-size: 18px;
     text-align: center;
-    color: #5dc2fe;
+    color: #16a1f1;
+    font-weight: bold;
+    span{
+        margin-right: 10px;
+    }
 }
 
 .decription {
     text-indent: 2em;
+    color: @mainColor;
     line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+  
 }
 
 //bootstrap标签页重置样式
@@ -152,16 +158,20 @@ body.bg04 {background-image:url("../img/bg04.png");} */
     line-height: 20px;
 }
 
-xpanel-wrapper-2:nth-child(1) {
+.xpanel-wrapper-2:nth-child(1) {
     height: 30%;
 }
 
 .xpanel-wrapper-2:nth-child(2) {
-    height: 30%;
+    height: 40%;
+    .decription{
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+    }
 }
 
 .xpanel-wrapper-2:nth-child(3) {
-    height: 39.9%;
+    height: 30%;
     padding-bottom: 8px;
     #kiwi-photo {
         width: 100%;
@@ -174,8 +184,14 @@ xpanel-wrapper-2:nth-child(1) {
     }
 }
 
-.xpanel-wrapper-3 {
-    height: 33.33333%;
+.xpanel-wrapper-3:nth-child(1) {
+    height: 40%;
+}
+.xpanel-wrapper-3:nth-child(2) {
+    height: 40%;
+}
+.xpanel-wrapper-3:nth-child(3) {
+    height: 20%;
 }
 
 //工具栏
