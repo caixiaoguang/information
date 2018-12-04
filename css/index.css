@@ -158,10 +158,10 @@ body.bg04 {background-image:url("../img/bg04.png");} */
   height: 100%;
 }
 .xpanel-wrapper-3:nth-child(1) {
-  height: 40%;
+  height: 50%;
 }
 .xpanel-wrapper-3:nth-child(2) {
-  height: 40%;
+  height: 30%;
 }
 .xpanel-wrapper-3:nth-child(3) {
   height: 20%;

@@ -103,6 +103,4 @@ $(function () {
         zoomInTitle: '放大',
         zoomOutTitle: '缩小'
     }).addTo(map);
-
-
 })
