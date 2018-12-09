@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./lib//bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./lib/leaflet/leaflet.css">
-	<link rel="stylesheet" href="./lib/layui/css/layui.css">
+	<link rel="stylesheet" href="./lib/vedio/video-js.min.css">
 	<link rel="stylesheet" href="./css/index.css">
 	<link rel="stylesheet" href="./css/province.css">
 </head>
@@ -31,37 +31,84 @@
 							<div class="xpanel">
 								<div class="main-color" id="fruit-feature">
 									<div class="title">
-										<span class="glyphicon glyphicon-star"></span>区域猕猴桃特色</div>
+										<span class="glyphicon glyphicon-plane"></span>出口基本情况
+									</div>
 									<div>
 										<a>
 											<p class="decription">
-												猕猴桃是原产中国的落叶性藤本果树，全世界已有记载的54种猕猴桃，中国就有52种。猕猴桃在中国发现和利用的时间最早，已有3000年的历史，栽培利用的时间，最少已有1200多年。
+												我国进口猕猴桃主要来自新西兰、智利和意大利，我国猕猴桃出口对象主要是俄罗斯、马来西亚等国家以及中国香港、中国台湾省等地区，出口数量约在数百吨左右。
 											</p>
 										</a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- 产量排名-->
+						<!-- 种植情况 -->
 						<div class="xpanel-wrapper xpanel-wrapper-2">
-							<div class="xpanel">
+							<div class="xpanel" style="padding: 12px;">
 								<div class="fill-h" id="planting-info">
-									<table id='ranking'>
-									</table>
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">出口国家</a></li>
+										<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">出口价格</a></li>
+									</ul>
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="home">
+												<!-- <table id="output"></table> -->
+										</div>
+										<div role="tabpanel" class="tab-pane" id="profile">..4444.</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<!-- 出口比例 -->
+						<!-- 缩略图 -->
 						<div class="xpanel-wrapper xpanel-wrapper-2">
 							<div class="xpanel">
-								<div class="fill-h" id="out">
+								<div class="fill-h" id="kiwi-photo">
+									<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+										<!-- Indicators -->
+										<ol class="carousel-indicators">
+											<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+											<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+											<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+										</ol>
+
+										<!-- Wrapper for slides -->
+										<div class="carousel-inner" role="listbox">
+											<div class="item active">
+												<img src="./img/kiwi.jpg" alt="...">
+												<div class="carousel-caption">
+												</div>
+											</div>
+											<div class="item">
+												<img src="./img/kiwi_1.jpg" alt="...">
+												<div class="carousel-caption">
+												</div>
+											</div>
+											<div class="item">
+												<img src="./img/kiwi.jpg" alt="...">
+												<div class="carousel-caption">
+												</div>
+											</div>
+										</div>
+
+										<!-- Controls -->
+										<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
 
-					<div class="col-lg-6 fill-h">
+					<div class="col-lg-9 fill-h">
 						<!-- 工具 -->
 						<div class="xpanel-wrapper xpanel-wrapper-1">
 							<div class="xpanel">
@@ -70,10 +117,10 @@
 										<span class="glyphicon glyphicon-map-marker"></span>
 										<div class="btn-group" id="btn">
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span>省县</span> <span class="caret"></span>
+												<span>国家</span> <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="./index.html">园区</a></li>
+												<li><a href="./province.html">省县</a></li>
 												<li><a href="./country.html">国家</a></li>
 											</ul>
 										</div>
@@ -124,6 +171,7 @@
 											<button type="button" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												<span>全屏</span>
 											</button>
+
 										</div>
 									</div>
 								</div>
@@ -170,52 +218,25 @@
 							</div>
 						</div>
 					</div>
-
-
-
-					<div class="col-lg-3 fill-h">
-						<div class="xpanel-wrapper xpanel-wrapper-3">
-							<div class="xpanel">
-								<!-- 各类品种情况 -->
-								<div class="fill-h" id="variety-info">
-									<ul class="nav nav-tabs" role="tablist">
-										<li role="presentation" class="active"><a href="#variety-ranking" aria-controls="variety-ranking" role="tab" data-toggle="tab">各类型产量比例</a></li>
-										<li role="presentation"><a href="#variety-proportion" aria-controls="variety-proportion" role="tab" data-toggle="tab">各类型情况</a></li>
-									</ul>
-									<!-- Tab panes -->
-									<div class="tab-content" style="height:100%">
-										<div role="tabpanel" class="tab-pane active" id="variety-ranking">
-										</div>
-										<div role="tabpanel" class="tab-pane" id="variety-proportion" >
-												<table id="variety"></table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="xpanel-wrapper xpanel-wrapper-3">
-							<div class="xpanel">
-								<!-- 近五年产量 -->
-								<div class="fill-h" id="last-five"></div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
+
 		</div>
+	</div>
+	</div>
+	</div>
 
 
 	</div>
 </body>
 
-<script src="./lib/jquery-3.3.1.min.js"></script>
-<script src="./lib/echarts-3.8.5.min.js"></script>
-<script src="./lib//bootstrap//js/bootstrap.min.js"></script>
-<script src="./lib/leaflet/leaflet.js"></script>
-<script src="./lib/leaflet/leaflet.ChineseTmsProviders.js"></script>
+<script src="./lib/main.min.js"></script>
 <script src="./lib/layui/layui.all.js"></script>
-<script src="./js/index.js"></script>
-<script src="./js/province.js"></script>
-
+<!-- <script src="./lib/jquery-3.3.1.min.js"></script>
+<script src="./lib/echarts-3.8.5.min.js"></script> -->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="./lib/leaflet/leaflet.js"></script>
+<script src="./lib/leaflet/leaflet.ChineseTmsProviders.js"></script> -->
+<script src="./js/country.js"></script>
 
 </html>

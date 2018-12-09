@@ -425,7 +425,7 @@ table.render({
     , size: 'sm' //小尺寸的表格
     , cols: [[ //表8
         { field: 'ranking', title: '排名', sort: true, fixed: 'left', width: "19%" }
-        , { field: 'type', title: '类型', width: "25%" }
+        , { field: 'type', title: '类型', width: "24%" }
         , { field: 'area', title: '面积', width: "20%" }
         , { field: 'output', title: '产量(吨)', width: "23%" }
         , { field: 'price', title: '单价', width: "17%" }
