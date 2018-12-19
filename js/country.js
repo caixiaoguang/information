@@ -151,7 +151,7 @@ var geoCoordMap = {
     '墨西哥': [-101.055804, 23.716261],
     '巴西': [-49.984908, -13.951937],
     '德国': [11.682831, 51.443895],
-    '韩国': [127.953747, 36.232444]
+    '韩国': [127.953747, 36.232444],
 };
 
 
@@ -346,39 +346,100 @@ option = {
 overlay.setOption(option);
 
 
-
+//表格相关
 var table = layui.table;
-//出口国家
-var outputTableH = parseInt($('#planting-info').css('height')) - 97;
+var tableHeight = parseInt($('#output-info').css('height'));
 
-console.log(outputTableH);
-
-var varietyData = [
-    { ranking: 1, type: '类型一', area: 1000, output: 500, price:10},
-    { ranking: 2, type: '类型二', area: 965, output: 344, price:11},
-    { ranking: 3, type: '类型三', area: 965, output: 222, price:5},
-    { ranking: 4, type: '类型四', area: 965, output: 552, price:9},
-    { ranking: 5, type: '类型五', area: 965, output: 500, price:8},
-    { ranking: 6, type: '类型六', area: 965, output: 382, price:15},
-    { ranking: 7, type: '类型七', area: 965, output: 830, price:14},
-    { ranking: 8, type: '类型八', area: 965, output: 217, price:16},
-    { ranking: 9, type: '类型九', area: 965, output: 500, price:10},
-    { ranking: 10, type: '类型十', area: 965, output: 500, price:10},
+//园区排名表格数据
+var rankingData = [
+    { ranking: 1, name: '韩国', output: 1000, add: false },
+    { ranking: 2, name: '美国', output: 965, add: true },
+    { ranking: 3, name: '墨西哥', output: 965, add: false },
+    { ranking: 4, name: '德国', output: 965, add: true },
+    { ranking: 5, name: '巴西', output: 965, add: false },
+    { ranking: 6, name: '日本', output: 965, add: true },
+    { ranking: 7, name: '英国', output: 965, add: true },
+    { ranking: 8, name: '法国', output: 965, add: false },
+    { ranking: 9, name: '西班牙', output: 965, add: false },
+    { ranking: 10, name: '瑞士', output: 965, add: true },
+    { ranking: 11, name: '', output: 965, add: true },
+    { ranking: 12, name: '', output: 965, add: true },
 ]
 
+//处理表格数据
+rankingData.forEach(item => {
+    item['location'] = '<a><i class="glyphicon glyphicon-map-marker"></a>';
+    if (item.add) {
+        item['trend'] = '<i class="glyphicon glyphicon-arrow-up">'
+    } else {
+        item['trend'] = '<i class="glyphicon glyphicon-arrow-down">'
+    }
 
+})
 
 table.render({
-    elem: '#output'
-    , height: 40
+    elem: '#output-static'
+    , height: tableHeight
     , even: true //开启隔行背景
     , size: 'sm' //小尺寸的表格
-    , cols: [[ //表8
-        { field: 'ranking', title: '排名', sort: true, fixed: 'left', width: "19%" }
-        , { field: 'type', title: '类型', width: "25%" }
-        , { field: 'area', title: '面积', width: "20%" }
-        , { field: 'output', title: '产量(吨)', width: "23%" }
-        , { field: 'price', title: '单价', width: "17%" }
+    , cols: [[ //表头
+        { field: 'ranking', title: '排名', sort: true, fixed: 'left', width: "25%" }
+        , { field: 'name', title: '国家', width: "23%" }
+        , { field: 'output', title: '出口量(吨)', width: "28%" }
+        , { field: 'trend', title: '趋势', width: "25%" }
     ]],
-    data: varietyData
+    data: rankingData
 });
+
+
+
+//出口品种饼状图
+var outChart = echarts.init(document.getElementById('output-variety'));
+option = {
+    title: {
+        text: '各品种出口比例',
+        x: 'center',
+        textStyle: {
+            color: '#5dc2fe'
+        },
+    },
+    grid: {
+
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: ['品种一', '品种二', '品种三', '品种四', ],
+        textStyle: {
+            color: '#5dc2fe'
+        }
+    },
+    series: [
+        {
+            name: '出口占比',
+            type: 'pie',
+            radius: '55%',
+            center: ['50%', '60%'],
+            data: [
+                { value: 1200, name: '品种一' },
+                { value: 911, name: '品种二' },
+                { value: 1982, name: '品种三' },
+                { value: 521, name: '品种四' },
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+outChart.setOption(option);
+
+
